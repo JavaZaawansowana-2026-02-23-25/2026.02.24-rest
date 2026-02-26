@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.comarch.szkolenia.rest.model.Customer" table="tcustomer">
+        <id name="id" column="id" type="int">
+            <generator class="identity"/>
+        </id>
+
+        <property name="name" column="name" type="string"/>
+        <property name="surname" column="surname" type="string"/>
+        <property name="email" column="email" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <property name="phone" column="phone" type="string"/>
+        <property name="dateOfBirth" column="date_of_birth" type="timestamp"/>
+    </class>
+</hibernate-mapping>
+

@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-@Component
 public class CustomerRepositoryImpl implements CustomerRepository {
 
     private final List<Customer> customers = new ArrayList<>();
@@ -71,16 +71,16 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     private void seedCustomers() {
-        this.customers.add(new Customer(++lastId, "Jan", "Kowalski", "jan.kowalski@example.com", "pass1", "500100200", LocalDateTime.of(1985, 3, 12, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Anna", "Nowak", "anna.nowak@example.com", "pass2", "500100201", LocalDateTime.of(1990, 7, 5, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Piotr", "Wisniewski", "piotr.wisniewski@acme.com", "pass3", "500100202", LocalDateTime.of(1979, 11, 23, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Kasia", "Zielinska", "kasia.zielinska@acme.com", "pass4", "500100203", LocalDateTime.of(1995, 1, 17, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Tomasz", "Wojcik", "tomasz.wojcik@corp.pl", "pass5", "500100204", LocalDateTime.of(1988, 9, 9, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Ewa", "Kaczmarek", "ewa.kaczmarek@corp.pl", "pass6", "500100205", LocalDateTime.of(1992, 6, 30, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Marek", "Mazur", "marek.mazur@demo.org", "pass7", "500100206", LocalDateTime.of(1983, 4, 2, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Alicja", "Krawczyk", "alicja.krawczyk@demo.org", "pass8", "500100207", LocalDateTime.of(1998, 12, 14, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Pawel", "Dabrowski", "pawel.dabrowski@test.net", "pass9", "500100208", LocalDateTime.of(1975, 8, 26, 0, 0)));
-        this.customers.add(new Customer(++lastId, "Magda", "Lewandowska", "magda.lewandowska@test.net", "pass10", "500100209", LocalDateTime.of(1987, 2, 8, 0, 0)));
+        this.customers.add(new Customer(++lastId, "Jan", "Kowalski", "jan.kowalski@example.com", "pass1", "500100200", LocalDateTime.of(1985, 3, 12, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Anna", "Nowak", "anna.nowak@example.com", "pass2", "500100201", LocalDateTime.of(1990, 7, 5, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Piotr", "Wisniewski", "piotr.wisniewski@acme.com", "pass3", "500100202", LocalDateTime.of(1979, 11, 23, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Kasia", "Zielinska", "kasia.zielinska@acme.com", "pass4", "500100203", LocalDateTime.of(1995, 1, 17, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Tomasz", "Wojcik", "tomasz.wojcik@corp.pl", "pass5", "500100204", LocalDateTime.of(1988, 9, 9, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Ewa", "Kaczmarek", "ewa.kaczmarek@corp.pl", "pass6", "500100205", LocalDateTime.of(1992, 6, 30, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Marek", "Mazur", "marek.mazur@demo.org", "pass7", "500100206", LocalDateTime.of(1983, 4, 2, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Alicja", "Krawczyk", "alicja.krawczyk@demo.org", "pass8", "500100207", LocalDateTime.of(1998, 12, 14, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Pawel", "Dabrowski", "pawel.dabrowski@test.net", "pass9", "500100208", LocalDateTime.of(1975, 8, 26, 0, 0), Collections.EMPTY_LIST));
+        this.customers.add(new Customer(++lastId, "Magda", "Lewandowska", "magda.lewandowska@test.net", "pass10", "500100209", LocalDateTime.of(1987, 2, 8, 0, 0), Collections.EMPTY_LIST));
     }
 
     private int findIndexById(int id) {
